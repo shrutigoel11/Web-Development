@@ -1,0 +1,33 @@
+#zero{
+width: 250px;
+height: 500px;
+background-color: black;
+}
+#one{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background-color: red;
+    margin-top: 56px;
+    margin-left: 56px;
+    padding: 15px;
+}
+#two{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background-color: yellow;
+    margin-top: 56px;
+    margin-left: 56px;
+    padding: 15px;
+}
+
+#three{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background-color: green;
+    margin-top: 56px;
+    margin-left: 56px;
+    padding: 13px;
+}

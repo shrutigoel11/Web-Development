@@ -1,0 +1,13 @@
+#outer{
+    display: flex;
+    background-color: black;
+    height: 400px;
+    width:400px;
+    justify-content: center;
+    align-items: center;
+}
+#inner{
+    background-color: red;
+    height:100px;
+    width:100px;
+} 

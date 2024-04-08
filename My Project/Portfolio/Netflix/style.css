@@ -1,0 +1,102 @@
+h1{
+    color:red;
+    font-size: 55px;
+    position:absolute;
+    left:20px
+}
+h3{
+    color:white;
+    font-size:45px;
+    padding: 250px 0px 0px 30px;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h2{
+    color:white;
+    font-size:25px;
+    padding:0px 0px 0px 545px ;
+    font-family: serif;
+}
+h4{
+    color:white;
+    font-size:20px;
+    padding:0px 0px 0px 450px ;
+    font-family: serif;
+}
+body{
+    background-color:black;    
+}
+header{
+    background-size: cover;
+    background-image: url(Netflix-Background.jpg);
+}
+button{
+    color:white;
+    background-color: red;
+}
+#body{
+    color:white;
+    text-align: center;
+    margin-top: -30px;
+    font-size: 40px;
+    border:20 solid black;
+}
+
+footer{
+    color: aliceblue;
+}
+p{
+    color:rgb(255, 255, 255);
+    font-size: 55px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position:absolute;
+    left:20px;
+    bottom:25px;
+}
+h5{
+    color: white;
+    font-size: medium;
+    position: absolute;
+    font-family:'Times New Roman', Times, serif ;
+    left:20px;
+    bottom:20px;
+}
+
+#down{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    position: absolute;
+    bottom:-650px;
+    right:450px;
+}
+#inner{
+    color: white;
+    font-size: large;
+    position: absolute;
+    font-family:'Times New Roman', Times, serif ;
+    right:-10px;
+}
+#watch{
+    color: white;
+    font-size: large;
+    position: absolute;
+    font-family:'Times New Roman', Times, serif ;
+    right:-300px;
+}
+#enjoy{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    text-align:centre;
+    position: absolute;
+    bottom:-100px;
+    right:550px;
+}
+#faq{
+    color:white;
+    text-align: center;
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color:red;
+}

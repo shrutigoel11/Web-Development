@@ -1,0 +1,30 @@
+div{
+    width:500px;
+    height: 50px;
+    background-color: rgb(255, 0, 0);
+    color:aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    align-content: center;
+    border:2px solid red;
+    /* transition-property: all;
+    transition-duration: 2s; */
+    /* transform:rotate(70deg); */
+    /* transition:all 2s ease-in;  */
+}
+div:hover{
+    color:wheat;
+    background-color:black;
+    font-size: 20px;
+    transition-timing-function: steps(5);
+    /* transform:scale(0.8);
+    transform: rotate(25deg);
+    transform:translate(20px); */
+    transform:skew(30deg);
+}
+div:active{
+    color:rgb(45, 41, 32);
+    background-color:rgb(110, 65, 65);
+    font-size: 40px;
+}

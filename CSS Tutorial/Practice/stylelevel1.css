@@ -1,0 +1,23 @@
+ h1{
+    color:#ff0000;
+ }
+ p{
+   color:rgb(211, 181, 143);
+ }
+ button{
+   color:darkgreen;
+   background-color:lightskyblue;
+ }
+ body{
+   background-color: black;
+ }
+ *{
+   color: antiquewhite;
+ }
+ #h2{
+   color:brown
+ }
+ .myclass{
+   color:honeydew
+ }
+ 

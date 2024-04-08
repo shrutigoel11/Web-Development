@@ -1,0 +1,41 @@
+h1{
+    text-align:center;
+    text-decoration: underline;
+    height: 50px;
+    background-color: rgb(240, 221, 223);
+}
+body{
+    background-color: rgb(228, 225, 225);
+    border-color: black;
+    border-style: solid;
+    border-radius: 1%;
+    
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-weight:800 ;
+    font-style: italic;
+    background-color: blanchedalmond;
+}
+h4{
+    font-weight: 400;
+    font-family: cursive,'Times New Roman', Times, serif;
+    height: 70px;
+    background-color: antiquewhite;
+}
+h2{
+    text-decoration: underline;
+    background-color: rgb(240, 221, 223);
+}
+section{
+    background-color: antiquewhite;
+}
+video{
+    display: block;
+    margin:0 auto;
+}
+a:hover{
+    text-decoration: underline;
+}

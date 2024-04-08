@@ -1,0 +1,14 @@
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: pink;
+}
+a{
+    background-color: antiquewhite;
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style-type: none;
+}

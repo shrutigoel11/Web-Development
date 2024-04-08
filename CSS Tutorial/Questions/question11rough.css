@@ -1,0 +1,16 @@
+div{
+    /* flex container */
+    display:flex;
+    background-color: pink;
+    justify-content: space-evenly;
+}
+a{
+    /* flex itmes */
+    text-decoration: none;
+    color: black;
+    background-color: aquamarine;
+}
+li{
+    list-style-type: none ;
+    display: inline;
+}
