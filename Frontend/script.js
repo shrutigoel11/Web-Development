@@ -13,3 +13,5 @@ console.log(gettag);
 let elements=document.querySelector("p");
 console.dir(elements);
 console.log(getid.tagName);
+let div=document.querySelector("div");
+console.dir(div);
