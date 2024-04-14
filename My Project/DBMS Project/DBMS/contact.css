@@ -1,0 +1,21 @@
+*{
+    color:white;
+    opacity:1;
+}
+body{
+    background-color:black ;
+    text-align-last:center;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/834/602/559/computer-keyboards-wallpaper-preview.jpg);
+
+}
+h1{
+    text-align: center;
+}
+.content{
+    margin-left: 30%;
+    text-align: center;
+    border:2px solid rgb(255,255,255,0.4);
+    background-color: rgba(26, 26, 26, 0.1);;
+    border-radius: 3px;
+    width:40%
+}

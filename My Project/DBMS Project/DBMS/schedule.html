@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+    <div class="outer">
+        <div class="heading">Check Schedule</div>
+        <div class="selector">
+            <div class="box1">
+             <select id="source-list" style="width:300px ; height: 50px;">
+                <option> Select your option</option>
+                <!-- <option value="station1">Station 1</option>
+                <option value="station2">Station 2</option>
+                <option value="station3">Station 3</option>
+                <option value="station4">Station 4</option>
+                <option value="station5">Station 5</option>
+                <option value="station6">Station 6</option>
+                <option value="station7">Station 7</option>
+                <option value="station8">Station 8</option>
+                <option value="station9">Station 9</option>
+                <option value="station10">Station 10</option> -->
+             </select>
+            </div>
+            <p>&#8597</p>
+            <div class="box2">
+                <select id="destination-list" style="width:300px ; height: 50px;">
+                    <option> Select your option </option>
+                    <!-- <option value="station1">Station 1</option>
+                    <option value="station2">Station 2</option>
+                    <option value="station3">Station 3</option>
+                    <option value="station4">Station 4</option>
+                    <option value="station5">Station 5</option>
+                    <option value="station6">Station 6</option>
+                    <option value="station7">Station 7</option>
+                    <option value="station8">Station 8</option>
+                    <option value="station9">Station 9</option>
+                    <option value="station10">Station 10</option> -->
+                </select>
+            </div>
+            <br/>
+            <button  type="button" class="btn btn-primary btn-lg">Check</button>
+            <!-- <button style="width:100px; height:45px">Check</button> -->
+        </div>
+        <!-- <script>
+
+            let sourceList = ["Station 1", "Station 2", "Station 3","Station 4", "Station 5", "Station 6","Station 7", "Station 8", "Station 9","Station 10"]; 
+            let destinationList = ["Station 1", "Station 2", "Station 3","Station 4", "Station 5", "Station 6","Station 7", "Station 8", "Station 9","Station 10"];
+            const addOption = (list, value, text) => {
+               const option = document.createElement('option');
+               option.text = text;
+               option.value = value;
+               list.appendChild(option);
+            }
+
+
+            let source = document.getElementById('source-list');
+            let destination = document.getElementById('destination-list');
+
+            sourceList.forEach((element) => {
+                addOption(source, element, element);
+                
+            });
+            destinationList.forEach((element) => {
+                addOption(destination, element, element);  
+            });
+
+            
+        </script> -->
+    </div>
+    <script src="schedule.js"></script>
+</body>
+</html>
