@@ -1,0 +1,22 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: #96C0B7;
+}
+
+h1{
+    text-align: center;
+}
+.center{
+    display: block;
+    margin: auto;
+    width:50%;
+}
+button{
+    display: block;
+    margin-top: 2rem;
+    margin-left: 35%;
+    width:30%;
+}
