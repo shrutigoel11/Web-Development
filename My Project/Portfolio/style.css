@@ -13,6 +13,9 @@ body{
 }
 a{
     text-decoration: none;
+    color: #161421;
+    font-weight: 300;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 p{
     font-weight:800 ;
