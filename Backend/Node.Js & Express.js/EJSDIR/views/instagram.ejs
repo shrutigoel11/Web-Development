@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+<body>
+    <h1>This page belongs to @<%= data.name %></h1>
+    <button>Follow</button>
+    <button>Subscribe</button>
+    <!--loops -->
+    <ul>
+        <h3>Accounts that follow you:</h3>
+        
+    <% for(let name of followers){%>
+                <li><%=name%></li>
+    <%}%>
+    </ul>
+    <p>Followers: <%=data.followers %></p>
+    <p>Following: <%=data.following %></p>
+    <hr/>
+    <% for(let post of data.posts){%>
+       <img src=" <%= post.image %> " alt="some img"/>
+       <p>Likes: <%=post.likes %></p>
+       <p>Comments: <%=post.comments %></p>
+    <% } %>
+
+    <script src="/app.js"></script>
+</body>
+</html>
