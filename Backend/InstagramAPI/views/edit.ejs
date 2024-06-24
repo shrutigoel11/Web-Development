@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <style>
+        body {
+            background-color: rgba(250, 215, 241, 0.527);
+            text-align: center;
+            justify-content: center;
+        }
+        h1 {
+            align-content: center;
+        }
+        form {
+            margin: 5% 10% 20% 35%;
+            padding: 3rem;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            font-size: larger;
+            gap: 3rem;
+            width: 400px;
+            height: 200px;
+            border: 2px solid black;
+        }
+        input, textarea {
+            width: 350px;
+            font-size: small;
+        }
+        textarea {
+            height: 70px;
+            font-size: medium;
+        }
+        button {
+            width: 120px;
+            height: 40px;
+            border-radius: 5px;
+            font-size: medium;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit your post</h1>
+    <p class="user">Post id: <%= post.id %></p>
+    <p class="user">Post username: @<%= post.username %></p>
+    <form method="POST" action="/posts/<%= post.id %>?_method=PATCH">
+        <textarea placeholder="Edit your caption" name="caption"><%= post.caption %></textarea><br/><br/>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

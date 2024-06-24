@@ -1,0 +1,62 @@
+<!-- show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <style>
+        body {
+            background-color: rgba(250, 215, 241, 0.527);
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            font-family: cursive;
+            margin-top: 20px;
+        }
+        
+        .post {
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid black;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .post-image {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .caption {
+            font-style: italic;
+        }
+        
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Post Details</h1>
+    <div class="post">
+        <p><strong>ID:</strong> <%= post.id %></p>
+        <p><strong>Username:</strong> @<%= post.username %></p>
+        <img src="<%= post.imageUrl %>" alt="Post Image" class="post-image">
+        <p class="caption"><%= post.caption %></p>
+    </div>
+    <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+        <button>Delete Post</button>
+    </form>
+    <a href="/posts" class="back-link">Back to Posts</a>
+</body>
+</html>
+

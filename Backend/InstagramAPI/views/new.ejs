@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new post</title>
+    <style>
+        body{
+        background-color: rgba(250, 215, 241, 0.527);
+        text-align: center;
+        justify-content: center;
+        }
+        h1{
+            align-content: center;
+        }
+        form{
+            margin:5% 10% 20% 35%;
+            padding:3rem;
+            display:block;
+            justify-content: center;
+            align-items: center;
+            font-size: larger;
+            gap:3rem;
+            width:400px;
+            height:200px;
+            border: 2px solid black;
+        }
+        input{
+            width:350px;
+            font-size: small;
+        }
+        textarea{
+            width:350px;
+            height:70px;
+            font-size: medium;
+        }
+        button{
+            width:120px;
+            height: 40px;
+            border-radius: 5px;
+            font-size: medium;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>New Post</h1>
+    <form action="/posts" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="caption">Caption:</label><br>
+        <textarea id="caption" name="caption" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="imageUrl">Image URL:</label>
+        <input type="text" id="imageUrl" name="imageUrl" required><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
