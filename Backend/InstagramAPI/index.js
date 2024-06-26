@@ -10,6 +10,7 @@ const port = 3000;
 
 // Example posts array with random image URLs
 let posts = [
+
     {
         id: uuidv4(),
         username: "shruti",
@@ -45,7 +46,8 @@ app.use(methodOverride('_method'));
 
 // Handle GET request for /posts
 app.get("/posts", (req, res) => {
-    res.render("index", { posts });
+    const imagePath = "nav.jpg"; // Assuming nav.jpg is in the 'public' directory
+    res.render("index", { posts, imagePath });
 });
 
 // Render form for creating new post
@@ -99,7 +101,6 @@ app.delete("/posts/:id",(req,res)=>{
      posts=posts.filter((p)=>id!=p.id);
      res.redirect("/posts");
 })
-
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

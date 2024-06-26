@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
+    <title>Postify</title>
     <style>
+        a{
+            text-decoration: none;
+            font-size: medium;
+        }
+        a:hover{
+            color:#bab4ff
+        }
         body{
-        background-color: rgba(250, 215, 241, 0.527);
+        background-color: #c7c5db89;
         text-align: center;
         }
         
@@ -23,14 +30,17 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to Instagram</h1>
+    <div>
+        <img src="<%= imagePath %>" alt="Navigation Image">
+    </div>
+    <h1>Welcome to Postify</h1>
     <div class="section">
         <% for (let post of posts) { %>
             <p class="user">Username: @<%= post.username %></p>
             <img src=<%= post.imageUrl %> alt="Post Image" style="width: 200px; height: 200px;">
             <p class="caption">Caption: <%= post.caption %></p><br/>
-            <a href="http://localhost:3000/posts/<%=post.id%>">See in detail</a>
-            <a href="http://localhost:3000/posts/new">Create new</a><br/>
+            <a href="http://localhost:3000/posts/<%=post.id%>">See in detail  </a>
+            <a href="http://localhost:3000/posts/new">  Create new</a><br/>
             <a href="http://localhost:3000/posts/<%=post.id%>/edit">Edit</a><br/><br/><br/>
             <hr/> <!-- Optional: Add a horizontal line between posts -->
         <% } %>
