@@ -1,0 +1,50 @@
+body{
+    margin-left: 20px;
+    margin: 0%;
+    padding: 30px;
+    background-color: #ffffff;
+    background-image: url("https://th.bing.com/th/id/OIP.IX67tNakHuakFOK-Hn7W0wAAAA?rs=1&pid=ImgDetMain");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .outer{
+    margin-top: 3rem;
+    display:inline-block;
+} */
+.chat{
+
+    background-color: #e8d7f1;
+    display:inline-block;
+    padding:1rem;
+    /* justify-content: center;
+    align-items: center; */
+    border:1px solid black;
+    border-radius: 2rem;
+    /* width:100vw;
+    height:150px; */
+}
+h1{
+    text-align: center; 
+}
+.from,.to{
+    
+    padding:1rem;
+}
+.msg{
+    background-color: #a167a5;
+    padding:1rem;
+    border:1px solid black;
+    border-radius: 30px;;
+    font-weight: 300; 
+}
+
+form{    
+text-align: center;
+/* /* border-radius: 2rem;
+border:2px solid black;  */
+}
+button{
+    background-color:rgb(46, 147, 242);
+    border-radius: 5px;
+    padding:0.5rem;
+}
