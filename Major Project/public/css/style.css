@@ -1,0 +1,91 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
+    display: flex !important;
+    flex-direction: column !important ;
+    min-height: 100vh !important;
+}
+.container{
+    flex:1 !important;
+} 
+
+.navbar{
+    height:6rem;
+    background-color: white;
+}
+
+.fa-compass-drafting{
+    color:#fe424d;
+    font-size: 2.5rem;
+}
+.nav-link{
+    color:#222222 !important;
+}
+.f-info-links a{
+  text-decoration: none;
+  color:#222222
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info{
+    height:8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.f-info-links,.f-info-socials,.f-info-brand{
+    vertical-align: middle;
+    text-align: center;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-info-socials i{
+    font-size: 1.4rem;
+    margin-right: 1.5rem;
+}
+
+/* Cards */
+
+.card{
+    border:none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width:100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0% !important;
+}
+.card-text p{
+font-weight: 400 !important;
+
+}
+.card-link{
+    text-decoration: none;
+}
+/* Card Effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+/* Show */
+.show-img{
+    height: 40vh;
+}
