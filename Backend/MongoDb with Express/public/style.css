@@ -1,50 +1,61 @@
 body{
-    margin-left: 20px;
-    margin: 0%;
+    margin: 0;
     padding: 30px;
-    background-color: #ffffff;
-    background-image: url("https://th.bing.com/th/id/OIP.IX67tNakHuakFOK-Hn7W0wAAAA?rs=1&pid=ImgDetMain");
+    background-color: #FDF6E3;
+    /* background-image: url("https://images.unsplash.com/photo-1528460033278-a6ba57020470?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    font-family: Arial, sans-serif;
 }
-/* .outer{
-    margin-top: 3rem;
-    display:inline-block;
-} */
-.chat{
 
-    background-color: #e8d7f1;
-    display:inline-block;
-    padding:1rem;
-    /* justify-content: center;
-    align-items: center; */
-    border:1px solid black;
-    border-radius: 2rem;
-    /* width:100vw;
-    height:150px; */
+.chat{
+    background-color: #FFFFFF;
+    display: inline-block;
+    padding: 1rem;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
 }
+
 h1{
     text-align: center; 
+    color: #333333;
+    font-weight: 400;
 }
-.from,.to{
-    
-    padding:1rem;
+
+.from, .to{
+    padding: 1rem;
+    color: #666666;
 }
+
 .msg{
-    background-color: #a167a5;
-    padding:1rem;
-    border:1px solid black;
-    border-radius: 30px;;
+    background-color: #E8E8E8;
+    padding: 1rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
     font-weight: 300; 
+    color: #333333;
+    margin: 0.5rem 0;
 }
 
 form{    
-text-align: center;
-/* /* border-radius: 2rem;
-border:2px solid black;  */
+    text-align: center;
+    margin-top: 1rem;
 }
+
 button{
-    background-color:rgb(46, 147, 242);
+    background-color: #4A90E2;
     border-radius: 5px;
-    padding:0.5rem;
+    padding: 0.5rem 1rem;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: #357ABD;
 }
