@@ -61,19 +61,21 @@ app.post("/chats",async(req,res,next)=>{
 
 })
 
+function asyncWrap(fn){
+    return function(req,res,next){
+        fn(req,res,next).catch((err)=>next(err));
+    }
+}
+
 //Show route
-app.get("/chats/:id", async (req, res, next) => {
-    try {
+app.get("/chats/:id", asyncWrap(async (req, res, next) => {
         let { id } = req.params;
         let chat = await Chat.findById(id);
         if (!chat) {
              next(new ExpressError(404, "Chat not found"));
         }
         res.render("edit.ejs", { chat });
-    } catch (err) {
-        next(err);
-    }
-});
+}));
 
 //EDIT 
 
@@ -87,19 +89,24 @@ app.get("/chats/:id/edit",async(req,res)=>{
     }
 })
 
+//UPDATE 
 app.put("/chats/:id",async (req,res)=>{
-    let {id}=req.params;
+   try{ let {id}=req.params;
     let {msg:newMsg}=req.body;
     let updatedMsg=await Chat.findByIdAndUpdate(id,{msg:newMsg},{runValidators:true},{new:true});
-    res.redirect("/chats");
+    res.redirect("/chats");} catch(err){
+        next(err);
+    }
 })
 
 //DELETE
 
 app.delete("/chats/:id",async(req,res)=>{
-    let {id}=req.params;
+    try{let {id}=req.params;
     let chat=await Chat.findByIdAndDelete(id,{runValidators:true},{new:true});
-    res.redirect("/chats");
+    res.redirect("/chats");}catch(err){
+        next(err);
+    }
 })
 
 //ROOT
@@ -107,6 +114,28 @@ app.delete("/chats/:id",async(req,res)=>{
 app.get("/",(req,res)=>{
     console.log("Root is working");
 })
+//Mongoose Errors
+
+const handleValidationErr=(err)=>{
+    console.log("Validation Error Occured");
+    return err;
+}
+const handleCastErr=(err)=>{
+    console.log("Cast Error Occured");
+    return err;
+}
+app.use((err, req, res, next) => {
+   console.log(err.name);
+   if(err.name=="ValidationError"){
+    err=handleValidationErr(err);
+    next(err);
+   }
+   if(err.name=="CastError"){
+    err=handleCastErr(err);
+    next(err);
+   }
+});
+//ERROR HANDLING MIDDLEWARES
 app.use((err, req, res, next) => {
     const { status = 500, message = "Something went wrong" } = err;
     res.status(status).send(message);
