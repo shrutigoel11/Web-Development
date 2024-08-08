@@ -7,6 +7,7 @@ const methodOverride=require("method-override");
 const ejsMate=require("ejs-mate");
 const wrapAsync=require("./utils/wrapAsync.js");
 const ExpressError=require("./utils/ExpressError.js");
+const {listingSchema}=require('./schema.js');
 
 main().then(()=>console.log("Connected")).catch((err)=>console.log(err))
 
@@ -53,11 +54,23 @@ app.get("/listings/:id", wrapAsync(async (req, res) => {
     res.render("listings/show.ejs", { listing });
   }));
 
-//Create Route
-app.post("/listings",wrapAsync( async (req, res,next) => {
-  if(!req.body.listing){
-    throw new ExpressError(400,"Send valid data");
+  const validateListing=(req,res,next)=>{
+    let error=listingSchema.validate(req.body);
+    console.log(error);
+    if(error){
+      throw new ExpressError(400,result.error);
+    }
+    else{
+      next();
+    }
   }
+
+//Create Route
+app.post("/listings",validateListing,wrapAsync( async (req, res,next) => {
+  // if(!req.body.listing){
+  //   throw new ExpressError(400,"Send valid data");
+  // }
+ 
     const newListing = new Listing(req.body.listing);
     await newListing.save();
     res.redirect("/listings")
@@ -72,7 +85,7 @@ app.post("/listings",wrapAsync( async (req, res,next) => {
   }));
   
   //Update Route
-  app.put("/listings/:id", wrapAsync(async (req, res) => {
+  app.put("/listings/:id",validateListing, wrapAsync(async (req, res) => {
     if(!req.body.listing){
       throw new ExpressError(400,"Send valid data");
     }
@@ -95,7 +108,8 @@ app.delete("/listings/:id", wrapAsync (async (req, res) => {
   
 app.use((err,req,res,next)=>{
   let {statusCode=500,message="Something went wrong"}=err;
-  res.status(statusCode).send(message);
+  res.render("error.ejs",{message})
+  // res.status(statusCode).send(message);
 }) 
 
 app.listen("8080",()=>{
