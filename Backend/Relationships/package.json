@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "name": "relationships",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon user.js"
+  },
+  "keywords": [],
+  "author": "Shruti Goel",
+  "license": "ISC",
+  "description": ""
+}
